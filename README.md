@@ -35,3 +35,28 @@ By: Neriya Zudi | <img src="https://img.shields.io/badge/Neriya-Salesforce Delev
    * **LWC Components**
    * **LOTTIE Embedding animations**
    * **salesforce flow (send email action)**
+
+# Some Pictures...
+<h3> Main Page </h3>
+          The main page contains 3 LWC components that communicate with each other:<br>
+          Select opportunity - select an opportunity for presentation from opportunities related to the Price Book.<br>
+          Product table - displaying product details related to the selected opportunity,<br>
+          you can perform a search to filter results.<br>
+          Cart account - display of products selected by account and possibility to purchase the products.<br>
+ <img src="https://github.com/NeriyaZudi/Salesforce-Training/blob/main/project%20pictures/main%20page.png" align="center" 
+      alt="main win"  width="800" height="400"><br>
+  <h3> Add Products </h3>
+       In this window, products selected to be added to the cart will be displayed.<br>
+       You can continue by clicking the "Add products" button. <br>
+ <img src="https://github.com/NeriyaZudi/Salesforce-Training/blob/main/project%20pictures/add%20to%20cart.png" align="center"
+     alt="add" width="600" height="400"><br>
+<h3> Empty Cart </h3>
+       If no products have been added to the cart, a message will be displayed.<br>
+       Also, if there is no account associated with the opportunity, you can add one by clicking the link.<br>
+ <img src="https://github.com/NeriyaZudi/Salesforce-Training/blob/main/project%20pictures/empty%20cart.png" align="center"
+     alt="empty" width="600" height="400"><br>
+<h3> Receipt Email </h3>
+       After making a purchase, a trigger is activated that updates the required objects.<br>
+       And a flow is activated with the action of sending an email to the account with the purchase details.<br>
+ <img src="https://github.com/NeriyaZudi/Salesforce-Training/blob/main/project%20pictures/email%20send.png" align="center"
+     alt="email" width="600" height="400"><br>
