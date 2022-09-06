@@ -39,10 +39,10 @@ By: Neriya Zudi | <img src="https://img.shields.io/badge/Neriya-Salesforce Delev
 # Some Pictures...
 <h3> Main Page </h3>
           The main page contains 3 LWC components that communicate with each other:<br>
-          Select opportunity - select an opportunity for presentation from opportunities related to the Price Book.<br>
-          Product table - displaying product details related to the selected opportunity,<br>
+          <strong>Select opportunity </strong> - select an opportunity for presentation from opportunities related to the Price Book.<br>
+           <strong>Product table </strong> - displaying product details related to the selected opportunity,<br>
           you can perform a search to filter results.<br>
-          Cart account - display of products selected by account and possibility to purchase the products.<br>
+           <strong>Cart account </strong> - display of products selected by account and possibility to purchase the products.<br>
  <img src="https://github.com/NeriyaZudi/Salesforce-Training/blob/main/project%20pictures/main%20page.png" align="center" 
       alt="main win"  width="800" height="400"><br>
   <h3> Add Products </h3>
