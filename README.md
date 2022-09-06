@@ -24,3 +24,14 @@ By: Neriya Zudi | <img src="https://img.shields.io/badge/Neriya-Salesforce Delev
      Salesforce learning project
      The project displays objects such as accounts, opportunities, opportunity products
      The product integrates Lwc components and is interactive for the user
+
+ <img src="https://github.com/NeriyaZudi/Salesforce-Training/blob/main/project%20pictures/lightning-web-components-removebg-preview.png?raw=true" align="right"
+     alt="LWC logo" width="320" height="98">
+  <hr>
+    
+   In this project we demonstrate our knowledge in:
+   * **Salesforce interface and features**
+   * **Classes and APEX Triggers**
+   * **LWC Components**
+   * **LOTTIE Embedding animations**
+   * **salesforce flow (send email action)**
