@@ -1,0 +1,29 @@
+.carthead {
+  color: black;
+  font-weight: bolder;
+  font-size: large;
+}
+.total {
+  color: #006400;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: large;
+  margin-bottom: 2px;
+}
+.getanimation{
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  color:#6495ED;
+  font-size: large;
+  font-weight: bold;
+
+}
+.nocart{
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  color:red;
+  font-size: large;
+  font-weight: bold;
+}

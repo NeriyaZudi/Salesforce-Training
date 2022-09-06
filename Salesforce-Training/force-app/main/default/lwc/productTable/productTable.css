@@ -1,0 +1,53 @@
+.search {
+  width: max-content;
+  margin-bottom: 2px;
+  color: whitesmoke;
+}
+.btn {
+  margin-bottom: 35px;
+  margin-left: 16px;
+  background-color: azure;
+}
+.end{
+  margin-bottom: 5px;
+}
+.table {
+  font-family: cursive;
+  margin-bottom: 5px;
+}
+.data {
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  text-overflow: ellipsis;
+  white-space: initial;
+}
+h1 {
+  color: red;
+  font-size: 30px;
+}
+.filed-class {
+  width: max-content;
+  overflow: visible;
+  text-overflow: ellipsis;
+  white-space: initial;
+}
+.name {
+  font-size: medium;
+  font-style: italic;
+  font-weight: bold;
+  color: cadetblue;
+}
+.quantity {
+  font-size: medium;
+  font-weight: bold;
+}
+.price {
+  font-size: medium;
+  font-weight: bold;
+}
+.addanimation{
+  align-items: center;
+  align-content: center;
+  margin-left: 20px;
+}

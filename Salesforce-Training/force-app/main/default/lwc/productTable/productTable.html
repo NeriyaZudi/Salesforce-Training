@@ -1,0 +1,136 @@
+<template>
+  <div class="search">
+    <lightning-input
+      type="search"
+      label="Search Products"
+      onchange={handleSearchProducts}
+    ></lightning-input>
+  </div>
+
+  <template if:false={noProducts}>
+    <div class="table">
+      <lightning-datatable
+        key-field="Id"
+        data={availableItems}
+        columns={columns}
+        class="data"
+      >
+      </lightning-datatable>
+    </div>
+  </template>
+  <div class="btn">
+    <lightning-button
+      variant="brand"
+      class="slds-float_right"
+      label="Add products"
+      title="Add products to Related Account"
+      onclick={getSelectedProducts}
+      slot="actions"
+      icon-name="utility:cart"
+    >
+    </lightning-button>
+  </div>
+
+  <!-- modal start -->
+  <template if:true={isShowModal}>
+    <section
+      role="dialog"
+      tabindex="-1"
+      aria-labelledby="modal-heading-01"
+      aria-modal="true"
+      aria-describedby="modal-content-id-1"
+      class="slds-modal slds-fade-in-open"
+    >
+      <div class="slds-modal__container">
+        <!-- modal header start -->
+        <header class="slds-modal__header">
+          <button
+            class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+            title="Close"
+            onclick={hideModalBox}
+          >
+            <lightning-icon
+              icon-name="utility:close"
+              alternative-text="close"
+              variant="inverse"
+              size="small"
+            ></lightning-icon>
+            <span class="slds-assistive-text">Close</span>
+          </button>
+          <h2
+            id="modal-heading-01"
+            class="slds-text-heading_medium slds-hyphenate"
+          >
+            Add Products To Related Account
+          </h2>
+        </header>
+
+        <!-- modal body start -->
+        <div
+          class="slds-modal__content slds-p-around_medium"
+          id="modal-content-id-1"
+        >
+          <div class="slds-grid slds-wrap">
+            <template
+              if:true={isSelectProduct}
+              for:each={selectedItems}
+              for:item="product"
+            >
+              <div key={product.Id} class="slds-col slds-size_1-of-2">
+                <lightning-card title="Opportunity Line Item">
+                  <!-- <lightning-button label="Select" slot="actions" onclick={handleDone}></lightning-button> -->
+                  <div class="name">Product Name: {product.pName}</div>
+                  <div class="quantity">Quantity: {product.quantity}</div>
+                  <div class="price">Price: {product.price} €</div>
+                </lightning-card>
+              </div>
+            </template>
+          </div>
+          <template if:false={isSelectProduct}>
+            <div>No Products Selected</div>
+          </template>
+          <template if:true={isAddToCart}>
+            <div class="addanimation">
+              <c-lottie-player
+                mode="Normal"
+                background="transparent"
+                renderer="svg"
+                autoplay="true"
+                width="300"
+                height="300"
+                loop="true"
+                src="https://assets1.lottiefiles.com/packages/lf20_y9phsg3m.json"
+              ></c-lottie-player>
+            </div>
+          </template>
+        </div>
+
+        <!-- modal footer start-->
+        <footer class="slds-modal__footer">
+          <button class="slds-button_brand" onclick={handleAddToCart}>
+            Add products to Related Account
+          </button>
+        </footer>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </template>
+  <!-- modal end -->
+
+  <template if:true={noProducts}>
+    <h1>No Records Found</h1>
+    <div class="notfound">
+      <c-lottie-player
+        mode="Normal"
+        background="transparent"
+        renderer="svg"
+        autoplay="true"
+        width="300"
+        height="300"
+        loop="true"
+        src="https://assets6.lottiefiles.com/packages/lf20_scgyykem.json"
+      ></c-lottie-player>
+    </div>
+  </template>
+  <div class="end"><br /></div>
+</template>

@@ -1,0 +1,31 @@
+<template>
+  <div class="oppselect">
+    <h1>Price Book Opportunities</h1>
+    <h2>{priceBook}</h2>
+    <lightning-combobox
+      name="choosenOpp"
+      label="Opportunity"
+      value={current_value}
+      placeholder="Select Opportunity"
+      options={opportunities}
+      onchange={handleChange}
+    ></lightning-combobox>
+
+    <p class="select">Selected value is: {current_value}</p>
+
+    <!-- <c-product-table opportunity-id={current_value}></c-product-table> -->
+
+    <div class="morty">
+      <c-lottie-player
+        mode="Normal"
+        background="transparent"
+        renderer="svg"
+        autoplay="true"
+        width="150"
+        height="150"
+        loop="true"
+        src="https://assets2.lottiefiles.com/packages/lf20_4jsnlwpe.json"
+      ></c-lottie-player>
+    </div>
+  </div>
+</template>

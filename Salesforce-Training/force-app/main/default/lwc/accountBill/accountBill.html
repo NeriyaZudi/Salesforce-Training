@@ -1,0 +1,81 @@
+<template>
+  <article class="slds-card" style="margin-top: 5px">
+    <div class="slds-grid slds-einstein-header slds-card__header">
+      <header class="slds-media slds-media_center slds-has-flexi-truncate">
+        <div
+          class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3"
+        >
+          <div class="slds-media__figure">
+            <lightning-icon
+              icon-name="standard:checkout"
+              alternative-text="Account Cart"
+            ></lightning-icon>
+          </div>
+          <div class="slds-media__body">
+            <h2 class="carthead" title="Account Cart"></h2>
+            <span class="carthead">Account Cart</span>
+          </div>
+        </div>
+        <div
+          class="slds-einstein-header__figure slds-size_1-of-4 slds-medium-size_1-of-3"
+        ></div>
+      </header>
+    </div>
+    <div class="slds-card__body slds-card__body_inner">
+      <template if:true={displayCart} for:each={products} for:item="product">
+        <div key={product.Id} class="slds-col slds-size_2-of-2">
+          <c-product-card product={product}></c-product-card>
+        </div>
+      </template>
+      <template if:true={noAccountBill}>
+        <div class="nocart">
+          <h2>
+            There are no products in the cart / There is no Related Account<br />
+            Feel free to add if you want<br /><br />
+          </h2>
+          <a href={OppUrl} target="_blank">Add Account To Opportunity</a>
+          <c-lottie-player
+            mode="Normal"
+            background="transparent"
+            renderer="svg"
+            autoplay="true"
+            width="300"
+            height="300"
+            loop="true"
+            src="https://assets1.lottiefiles.com/private_files/lf30_e3pteeho.json"
+          ></c-lottie-player>
+        </div>
+      </template>
+    </div>
+    <footer class="slds-card__footer">
+      <div class="total">
+        Summary: {total} €
+        <lightning-button
+          variant="brand"
+          class="slds-float_right"
+          label="Get Products Now"
+          title="Get Products Now"
+          slot="actions"
+          onclick={getProducts}
+          icon-name="utility:pay"
+        >
+        </lightning-button>
+      </div>
+    </footer>
+    <template if:true={isGetProducts}>
+      <div class="getanimation">
+        <h2>A receipt will be sent by email</h2>
+        <c-lottie-player
+          mode="Normal"
+          background="transparent"
+          renderer="svg"
+          autoplay="true"
+          width="400"
+          height="400"
+          loop="true"
+          src="https://assets3.lottiefiles.com/packages/lf20_dd9wpbrh.json"
+        ></c-lottie-player>
+      </div>
+    </template>
+  </article>
+</template>

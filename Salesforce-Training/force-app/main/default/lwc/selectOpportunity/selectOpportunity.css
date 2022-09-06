@@ -1,0 +1,27 @@
+.oppselect {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  align-items: center;
+}
+h1 {
+  text-align: center;
+  font-size: large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #faebd7;
+  font-style: italic;
+  display: block;
+}
+h2 {
+  text-align: center;
+  font-size: medium;
+  font-family: cursive;
+  color: #fff8dc;
+}
+.select {
+  color: whitesmoke;
+  font-style: italic;
+}
+.morty {
+  margin-left: 100px;
+  margin-top: 5px;
+  align-self: center;
+}

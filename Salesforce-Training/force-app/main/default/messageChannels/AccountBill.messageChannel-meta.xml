@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Message Channel to pass account ID</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>This is id of account we want to display</description>
+        <fieldName>oppid</fieldName>
+    </lightningMessageFields>
+    <masterLabel>AccountBill</masterLabel>
+</LightningMessageChannel>
