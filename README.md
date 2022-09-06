@@ -14,3 +14,13 @@ The `sfdx-project.json` file contains useful configuration information for your 
 
 <img src="https://raw.githubusercontent.com/NeriyaZudi/Salesforce-Training/main/project%20pictures/main%20opp%20product.jpg" align="center"
      alt="cover" width="600" height="400">
+     
+By: Neriya Zudi | <img src="https://img.shields.io/badge/Neriya-Salesforce Delevoper-blue" alt="Ner" > 
+
+<h3> About the project </h3>
+   <img src="https://raw.githubusercontent.com/NeriyaZudi/Salesforce-Training/main/project%20pictures/salesforce%20back.png" align="right"
+     alt="SF logo" width="200" height="100">
+     
+     Salesforce learning project
+     The project displays objects such as accounts, opportunities, opportunity products
+     The product integrates Lwc components and is interactive for the user
